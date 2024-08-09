@@ -1,0 +1,407 @@
+.formaja {
+  /* This bit sets up the horizontal layout */
+  display: flex;
+  flex-direction: row;
+
+  /* This bit draws the box around it */
+  border: none;
+
+  /* I've used padding so you can see the edges of the elements. */
+  padding: 1px;
+}
+
+.inputan {
+  /* Tell the input to use all the available space */
+  flex-grow: 2;
+  /* And hide the input's outline, so the form looks like the outline */
+  border: none;
+}
+
+/* remove the input focus blue box, it will be in the wrong place. */
+.inputan:focus {
+  outline: none;
+}
+
+/* Add the focus effect to the form so it contains the button */
+.formaja:focus-within {
+  border: 1px solid #329da8;
+  border-radius: 1.9px;
+  border-width: 3px;
+  transition: 0.1s;
+}
+
+.buttonaja {
+  /* Just a little styling to make it pretty */
+  border: none;
+  background: #333333;
+  color: gray;
+}
+
+input[type="text"],
+textarea {
+  background-color: #333333;
+}
+
+::placeholder {
+  color: white;
+}
+
+.texthome {
+  font-size: 36px;
+  background: -webkit-linear-gradient(#00f260, #0575e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.containergweh {
+  width: 960px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a {
+  color: #00aff4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0095ff;
+  text-decoration: underline;
+}
+
+.game-link {
+  color: white;
+  text-decoration: none;
+}
+
+.game-link:hover {
+  color: #0095ff;
+  text-decoration: underline;
+}
+
+h5 {
+  color: white;
+}
+
+.top-seller {
+  width: 100%;
+  color: #fff;
+  border-spacing: 0 3px;
+  border-collapse: separate;
+  border: none;
+}
+
+.utk-thead {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.hover-cell {
+  width: 0%;
+}
+
+.utk-rank {
+  width: 5%;
+}
+
+.utk-price {
+  width: 15%;
+}
+
+.utk-cocurrent {
+  width: 18%;
+}
+
+.inside-cocur {
+  display: inline-flex;
+}
+
+.utk-peak {
+  width: 12%;
+}
+
+.inside-peak {
+  display: inline-flex;
+}
+
+.table-row {
+  background: linear-gradient(
+    90deg,
+    rgba(86, 92, 103, 0.3),
+    rgba(90, 98, 108, 0.3)
+  );
+  position: relative;
+  -webkit-transform: translate3d(0, 0, 0);
+  overflow: visible;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.rank-cell {
+  font-size: 17px;
+  font-weight: 800;
+  text-align: center;
+  width: 5%;
+}
+
+.capsule-cell {
+  padding: 6px 16px 6px 0px;
+  min-width: 50%;
+}
+
+.tc-item {
+  display: flex;
+  line-height: 52px;
+  align-items: center;
+  position: relative;
+}
+
+.capsule-art {
+  display: inline-block;
+  height: 52px;
+  vertical-align: middle;
+}
+
+.game-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  margin-left: 8px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.price-cell {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: fit-content;
+  min-width: 15%;
+}
+
+.price-widget {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.price-widget-container {
+  margin-top: 0px;
+  display: flex;
+  padding: 0px;
+  margin-top: 6px;
+  height: 38px;
+}
+
+.price-box {
+  font-size: 14px;
+  padding: 5px 8px;
+  align-items: center;
+  display: flex;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  white-space: nowrap;
+}
+
+.cocur-cell {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: 15%;
+}
+
+.peak-cell {
+  text-align: right;
+  padding-right: 16px;
+  color: #c6d4df;
+  width: 12%;
+}
+
+.bg-mp {
+  filter: saturate(0.4) opacity(0.4) blur(0px);
+  position: absolute;
+  top: -95px;
+  left: 1%;
+  width: calc(100vw - 200px);
+  max-width: 1900px;
+  transform-origin: top;
+  -webkit-mask: linear-gradient(180deg, rgb(0, 0, 0) 58%, rgba(0, 0, 0, 0) 95%),
+    radial-gradient(
+      15.77% 44.22% at 50% 104.95%,
+      rgba(66, 66, 66, 0) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      30.95% 86.8% at 30.69% 13.2%,
+      rgba(66, 66, 66, 0.33) 0%,
+      #333333 100%
+    ),
+    radial-gradient(
+      51.31% 143.89% at 49.99% 24.75%,
+      #000000 0%,
+      #000000 52.6%,
+      rgba(0, 0, 0, 0.18) 83.33%,
+      rgba(0, 0, 0, 0) 95.31%
+    );
+  mask: radial-gradient(
+    51.31% 143.89% at 49.99% -21.75%,
+    #000000 0%,
+    #000000 52.6%,
+    rgba(0, 0, 0, 0.18) 83.33%,
+    rgba(0, 0, 0, 0) 95.31%
+  );
+  -webkit-mask-composite: source-in;
+  mask-composite: source-in;
+  z-index: -1;
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #242f3f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #fff;
+  animation: loader 2s infinite ease;
+  text-align: center;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
+
+.text-card {
+  color: #67c1f5;
+}
+
+.btn-transition {
+  background: linear-gradient(45deg, #0037ff, #00adff);
+  transition: all 0.3s ease-out;
+  transform: scale(1);
+  color: white;
+}
+
+.btn-transition:hover {
+  background: linear-gradient(180deg, #ff7147, #e0417f);
+  transform: scale(1.1);
+  color: white;
+}
+
+.text-positive {
+  color: #66c0f4;
+}
+
+.text-mixed {
+  color: #b9a074;
+}
+
+.text-negative {
+  color: #a34c25;
+}
+
+.game_area_description {
+  line-height: 1.5em;
+  margin-top: 30px;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+.game_area_description > h2 {
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+.game_area_description > img {
+  width: 100%;
+  height: auto;
+}
+.game_area_description .bb_tag {
+  margin-top: 30px;
+  font-size: 15px;
+  color: #2f89bc;
+}
+
+.header-thing-good {
+  color: #6c3;
+}
+
+.header-thing-average {
+  color: #fc3;
+}
+
+.header-thing-poor {
+  color: #ff683b;
+}
+
+hr {
+  background-color: currentColor;
+  border: 0;
+}

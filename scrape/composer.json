@@ -1,0 +1,6 @@
+{
+    "name": "asus/scrape",
+    "require": {
+        "php-webdriver/webdriver": "^1.1"
+    }
+}

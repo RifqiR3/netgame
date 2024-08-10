@@ -28,36 +28,6 @@ if ($err) {
     $dataApp = json_decode($response);
 }
 
-$curl = curl_init();
-
-curl_setopt_array($curl, [
-    CURLOPT_URL => 'https://steam2.p.rapidapi.com/appReviews/' . $id_app . '/limit/10/*',
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_ENCODING => "",
-    CURLOPT_MAXREDIRS => 10,
-    CURLOPT_TIMEOUT => 30,
-    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    CURLOPT_CUSTOMREQUEST => "GET",
-    CURLOPT_HTTPHEADER => [
-        "X-RapidAPI-Host: steam2.p.rapidapi.com",
-        "X-RapidAPI-Key: 4fdba0765bmsh4139ca4893f8f16p13a248jsndd025a0186a6"
-    ],
-]);
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-    echo "cURL Error #:" . $err;
-} else {
-    $dataReview = json_decode($response);
-    // echo '<pre>';
-    // echo print_r($dataReview);
-    // echo '</pre>';
-}
-
 // Access steamapis
 // $req = file_get_contents('https://api.steamapis.com/market/app/' . $id_app . '?api_key=' . $apiKeySAPIS);
 // $dataSAPIS = json_decode($req);

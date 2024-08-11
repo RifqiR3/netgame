@@ -13,6 +13,8 @@ Second, use this command to start the chromedriver:
   chromedriver --port=4444
 ```
 
+PS: This version of chromedriver only support Google Chrome Ver.113
+
 ## Installation
 
 I recommend you to see this [repository](https://github.com/php-webdriver/php-webdriver) for installation
